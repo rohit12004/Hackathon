@@ -15,7 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/students/all');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/students/all`);
         setStudents(response.data.students);
       } catch (error) {
         console.error('Error fetching students:', error);
@@ -37,7 +37,7 @@ const Dashboard = () => {
   const updateStudent = async (updatedStudent) => {
     try {
       const response = await axios.put(
-        `https://hackathon-jgfy.onrender.com/students/update/${updatedStudent.registrationNo}`,
+        `${import.meta.env.VITE_API_URL}/students/update/${updatedStudent.registrationNo}`,
         updatedStudent
       );
       const updatedStudentData = response.data.student;

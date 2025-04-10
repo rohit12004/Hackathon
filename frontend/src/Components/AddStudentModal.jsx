@@ -23,7 +23,7 @@ const AddStudentModal = ({ isOpen, onClose, onSave }) => {
 
     // API call to register the student
     try {
-      const response = await axios.post('https://hackathon-jgfy.onrender.com/students/register', formData);
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/students/register`, formData);
       if (response.data.student) {
         onSave(response.data.student);  // Add student to the parent component
         onClose();  // Close the modal after saving
