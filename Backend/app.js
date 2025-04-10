@@ -11,7 +11,7 @@ const studentRoutes = require('./routes/students.routes')
 connectToDb()
 app = express()
 app.use(express.json())
-app.use(cors({ origin: 'https://hackathon-1-hw3y.onrender.comupdate' }));
+app.use(cors());
 // app.use(cookieparser())
 
 
