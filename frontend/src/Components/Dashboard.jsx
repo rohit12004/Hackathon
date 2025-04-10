@@ -139,7 +139,7 @@ const Dashboard = () => {
                   >
                     Edit
                   </button>
-                  <button className="delete-btn">Delete</button>
+                  {/* <button className="delete-btn">Delete</button> */}
                 </td>
               </tr>
             ))}
