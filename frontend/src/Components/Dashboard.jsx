@@ -37,7 +37,7 @@ const Dashboard = () => {
   const updateStudent = async (updatedStudent) => {
     try {
       const response = await axios.put(
-        `http://localhost:4000/students/update/${updatedStudent.registrationNo}`,
+        `https://hackathon-jgfy.onrender.com/students/update/${updatedStudent.registrationNo}`,
         updatedStudent
       );
       const updatedStudentData = response.data.student;
